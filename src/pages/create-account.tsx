@@ -48,6 +48,7 @@ const CreateAccount = () => {
     } = data;
     if (ok) {
       // redirect to login
+      alert("Account Created! Log in now!");
       history.push("/login");
     }
   };

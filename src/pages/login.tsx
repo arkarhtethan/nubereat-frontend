@@ -76,7 +76,7 @@ const Login = () => {
         <title>Login | Nuber Eats</title>
       </Helmet>
       <div className="w-full max-w-screen-sm flex flex-col items-center px-5">
-        <img src={nuberLogo} className="w-40 mb-10" />
+        <img alt="login" src={nuberLogo} className="w-40 mb-10" />
         <h4 className="text-left font-medium w-full text-3xl mb-5">
           Welcome back
         </h4>
@@ -117,7 +117,7 @@ const Login = () => {
             <FormError errorMessage={errors.password?.message} />
           )}
           {errors.password?.type === "minLength" && (
-            <FormError errorMessage="Password must be more than 10 chars." />
+            <FormError errorMessage="Password must be more than 5 chars." />
           )}
           <Button canClick={isValid} loading={loading} actionText="Log In" />
           {loginMutationResult?.login.error && (

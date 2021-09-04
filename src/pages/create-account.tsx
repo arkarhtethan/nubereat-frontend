@@ -49,7 +49,7 @@ const CreateAccount = () => {
     if (ok) {
       // redirect to login
       alert("Account Created! Log in now!");
-      history.push("/login");
+      history.push("/");
     }
   };
 
@@ -77,7 +77,7 @@ const CreateAccount = () => {
         <title>Create Account | Nuber Eats</title>
       </Helmet>
       <div className="w-full max-w-screen-sm flex flex-col items-center px-5">
-        <img src={nuberLogo} className="w-40 mb-10" />
+        <img alt="logo" src={nuberLogo} className="w-40 mb-10" />
         <h4 className="text-left font-medium w-full text-3xl mb-5">
           Let's get started
         </h4>
@@ -144,7 +144,7 @@ const CreateAccount = () => {
         </form>
         <div>
           Already have an account?{" "}
-          <Link to="/login" className="text-lime-600 hover:underline">
+          <Link to="/" className="text-lime-600 hover:underline">
             Log In.
           </Link>
         </div>

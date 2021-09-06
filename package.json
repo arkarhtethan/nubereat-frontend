@@ -33,6 +33,7 @@
     "apollo:codegen": "rm -rf src/__generated__ && apollo client:codegen src/__generated__ --target=typescript --outputFlat",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:cov": "npm test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -58,5 +59,12 @@
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.9"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/components/**/*.tsx",
+      "./src/pages/**/*.tsx",
+      "./src/routers/**/*.tsx"
+    ]
   }
 }

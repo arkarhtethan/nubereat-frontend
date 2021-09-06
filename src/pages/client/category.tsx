@@ -46,7 +46,6 @@ const Category = () => {
       },
     }
   );
-  console.log(data?.category.category.restaurants);
   return (
     <div>
       <Helmet>
@@ -55,18 +54,18 @@ const Category = () => {
       {!loading &&
         data?.category.category.restaurants &&
         data?.category.category.restaurants?.length > 0 && (
-          <div className="max-w-screen-xl mx-auto mt-4 px-5 pb-20">
-            <div>
-              <h1 className="font-semibold text-2xl">
+          <div className="max-w-screen-xl mx-auto mt-4 pb-20">
+            <div className="py-16 bg-gray-200 pl-16">
+              <h1 className="font-semibold text-4xl mb-4">
                 “{data?.category.category.name}”
               </h1>
-              <h4>
+              <h4 className="text-lg">
                 {data?.category.category.restaurants?.length} Results for “
                 {data?.category.category.name}
                 ”.
               </h4>
             </div>
-            <div className="grid md:grid-cols-3 gap-x-5 gap-y-10 mt-10">
+            <div className="grid md:grid-cols-3 gap-x-5 gap-y-10 mt-10  px-5">
               {data?.category.category.restaurants?.map((restaurant) => {
                 return (
                   <Restaurant

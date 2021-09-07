@@ -32,7 +32,7 @@ const ClientRoute = [
   </Route>,
 ];
 
-const LoggedInRouter = () => {
+const LoggedInRouter: React.FC = () => {
   const { data, loading, error } = useMe();
   if (error) {
     isLoggedInVar(false);

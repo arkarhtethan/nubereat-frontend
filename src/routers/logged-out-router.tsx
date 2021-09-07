@@ -4,7 +4,7 @@ import PageNotFound from "../pages/404";
 import CreateAccount from "../pages/create-account";
 import Login from "../pages/login";
 
-const LoggedOutRouter = () => {
+const LoggedOutRouter: React.FC = () => {
   return (
     <Router>
       <Switch>

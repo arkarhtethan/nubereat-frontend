@@ -13,7 +13,7 @@ import { Helmet } from "react-helmet-async";
 import { authToken, isLoggedInVar } from "../apollo";
 import { LOCALSTORAGE_TOKEN } from "../constants";
 
-const LOGIN_MUTATION = gql`
+export const LOGIN_MUTATION = gql`
   mutation LogInMutation($loginInput: LoginInput!) {
     login(input: $loginInput) {
       ok
@@ -105,7 +105,7 @@ const Login = () => {
           <input
             {...register("password", {
               required: "Password is required.",
-              minLength: 6,
+              // minLength: 6,
             })}
             required
             type="password"
@@ -115,9 +115,6 @@ const Login = () => {
           />
           {errors.password?.message && (
             <FormError errorMessage={errors.password?.message} />
-          )}
-          {errors.password?.type === "minLength" && (
-            <FormError errorMessage="Password must be more than 5 chars." />
           )}
           <Button canClick={isValid} loading={loading} actionText="Log In" />
           {loginMutationResult?.login.error && (

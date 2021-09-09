@@ -1,11 +1,6 @@
 import { ApolloProvider } from "@apollo/client";
 import { createMockClient, MockApolloClient } from "mock-apollo-client";
-import {
-  getByRole,
-  render,
-  RenderResult,
-  waitFor,
-} from "@testing-library/react";
+import { render, RenderResult, waitFor } from "@testing-library/react";
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";

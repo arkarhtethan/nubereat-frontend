@@ -12,7 +12,7 @@ import {
   createAccountMutation,
 } from "../__generated__/createAccountMutation";
 
-const CREATE_ACCOUNT_MUTATION = gql`
+export const CREATE_ACCOUNT_MUTATION = gql`
   mutation createAccountMutation($createAccountInput: CreateAccountInput!) {
     createAccount(input: $createAccountInput) {
       ok
@@ -106,7 +106,6 @@ const CreateAccount = () => {
           <input
             {...register("password", {
               required: "Password is required.",
-              minLength: 6,
             })}
             required
             type="password"
@@ -116,9 +115,6 @@ const CreateAccount = () => {
           />
           {errors.password?.message && (
             <FormError errorMessage={errors.password?.message} />
-          )}
-          {errors.password?.type === "minLength" && (
-            <FormError errorMessage="Password must be more than 10 chars." />
           )}
           <select
             {...register("role", {

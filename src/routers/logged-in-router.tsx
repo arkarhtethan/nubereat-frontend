@@ -8,6 +8,7 @@ import Category from "../pages/client/category";
 import Restaurant from "../pages/client/restaurant";
 import Restaurants from "../pages/client/restaurants";
 import Search from "../pages/client/search";
+import AddDish from "../pages/owner/add-dish";
 import CreateRestaurant from "../pages/owner/create-restaurant";
 import MyRestaurant from "../pages/owner/my-restaurant";
 import MyRestaurants from "../pages/owner/my-restaurants";
@@ -42,6 +43,7 @@ const restaurantRoutes = [
   { path: "/", component: <MyRestaurants /> },
   { path: "/create-restaurant", component: <CreateRestaurant /> },
   { path: "/restaurant/:id", component: <MyRestaurant /> },
+  { path: "/restaurant/:restaurantId/add-dish", component: <AddDish /> },
 ];
 
 const LoggedInRouter: React.FC = () => {
